@@ -20,10 +20,6 @@
 
 
 # ==> 命名关键字参数写法 这快报错，回家研究吧
-def foo(name, *, age, sex):
-	print(name)
-	print(age)
-	print(sex)
-
-foo('fox', age=23, sex='man')
+def person(name, age, *args, city, job):
+    print(name, age, args, city, job)
 
