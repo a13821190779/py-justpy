@@ -1,6 +1,9 @@
 # -*- coding: UTF-8 -*-
 
-import os, sys, time, subprocess
+import os
+import sys
+import time
+import subprocess
 
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
@@ -38,6 +41,9 @@ def kill_process():
 def start_process():
     global process, command
     log('Start process %s...' % ' '.join(command))
+    print('========================================')
+    print('========================================')
+    print('\n')
     process = subprocess.Popen(
         command, stdin=sys.stdin, stdout=sys.stdout, stderr=sys.stderr)
 
