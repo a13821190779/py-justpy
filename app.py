@@ -21,6 +21,7 @@ class MyFileSystemEventHander(FileSystemEventHandler):
 
     def on_any_event(self, event):
         if event.src_path.endswith('.py'):
+            print('\n')
             log('Python source file changed: %s' % event.src_path)
             self.restart()
 
@@ -71,11 +72,12 @@ def start_watch(path, callback):
 
 if __name__ == '__main__':
     argv = sys.argv[1:]
+    print(argv)
     if not argv:
-        print('Usage: ./pymonitor your-script.py')
+        print('用法：./app.py src/index.py')
         exit(0)
     if argv[0] != 'python':
-        argv.insert(0, 'python')
+        argv.insert(0, 'python3')
     command = argv
     path = os.path.abspath('.')
     start_watch(path, None)
