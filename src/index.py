@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
+# pip freeze 显示所有依赖包
+# pip install -r 包含所有依赖的文件
 
 # import stringio
 # import process
 # import reg
-import buildIn
+# import buildIn
 
 
 # 相当于es6中的...  ==>  可变参数写法
@@ -55,3 +57,5 @@ import buildIn
 
 # writeFile('/Users/fox/testProject/b.txt')
 # readFile('/Users/fox/testProject/b.txt')
+
+# 后台服务
