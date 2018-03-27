@@ -59,3 +59,5 @@
 # readFile('/Users/fox/testProject/b.txt')
 
 # 后台服务
+
+import fetchDynamic
