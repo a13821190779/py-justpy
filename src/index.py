@@ -60,4 +60,7 @@
 
 # 后台服务
 
-import fetchDynamic
+# import fetchDynamic
+# import web
+
+import fr
