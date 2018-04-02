@@ -100,4 +100,4 @@ class fetchTouTiao(object):
 
 ssl._create_default_https_context = ssl._create_unverified_context
 obj = fetchTouTiao()
-obj.start(keyword='dnf奶妈')
+obj.start(keyword='冲田杏梨')
