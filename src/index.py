@@ -9,7 +9,6 @@
 # import reg
 # import buildIn
 
-
 # 相当于es6中的...  ==>  可变参数写法
 # def foo(*args):
 # print(args)
@@ -32,7 +31,6 @@
 
 # person('fox', 23, city='天津', job='coder')
 
-
 # def readFile(path):
 #     try:
 #         file = open(path, 'r')
@@ -42,7 +40,6 @@
 #     finally:
 #         if (file):
 #             file.close()
-
 
 # def writeFile(path):
 #     try:
@@ -54,13 +51,23 @@
 #         if (file and not file.closed):
 #             file.close()
 
-
 # writeFile('/Users/fox/testProject/b.txt')
 # readFile('/Users/fox/testProject/b.txt')
 
-# 后台服务
-
+# 爬头条
 # import fetchDynamic
 # import web
 
-import fr
+# import fr
+
+# 图片上写文字
+# import writeText
+
+# 生成 200 个激活码
+# import generateCode
+
+# 获取文件内容长度
+# import getCountOfTxt
+
+# 统计代码行数
+import getCodeLine

@@ -60,13 +60,15 @@ class fetchTouTiao(object):
             os.system('rm -rf ' + os.path.join('./imgs/'))
             os.mkdir(os.path.join('./imgs/'))
             os.chmod(os.path.join('./imgs/'), stat.S_IRWXU)
-
+        print(content, '======')
         for item in content['data']:
+            print(item, '===')
             tempUrl = 'https://www.toutiao.com/a'
-            tagetUrl = urllib.parse.urlparse(
-                urllib.parse.unquote(item['open_url']))
-            targetId = json.loads(
-                tagetUrl.query.split('&')[2].split('=')[1])['search_result_id']
+            # tagetUrl = urllib.parse.urlparse(
+            #     urllib.parse.unquote(item['open_url']))
+            # targetId = json.loads(
+            #     tagetUrl.query.split('&')[2].split('=')[1])['search_result_id']
+            targetId = item['id']
 
             # 为了防止头条的 ua 检查， 也就是防反扒
             headers = {
@@ -83,7 +85,7 @@ class fetchTouTiao(object):
         print(green('一共%s张图片' % self.count))
 
     def start(self, *, keyword, count=5):
-        
+
         params = parse.urlencode({
             'offset': 0,
             'format': 'json',
@@ -93,11 +95,14 @@ class fetchTouTiao(object):
             'cur_tab': 3,
             'from': 'gallery'
         })
-            
+
         requests.get(
-            self.url, params=params, hooks={'response': self.mainResFn}, verify=False)
+            self.url,
+            params=params,
+            hooks={'response': self.mainResFn},
+            verify=False)
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
 obj = fetchTouTiao()
-obj.start(keyword='冲田杏梨')
+obj.start(keyword='火影忍者')

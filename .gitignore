@@ -1,6 +1,6 @@
 # custom
-./**/*.pyc
-./imgs/
+**/*.pyc
+imgs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
