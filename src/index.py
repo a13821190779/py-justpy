@@ -70,4 +70,18 @@
 # import getCountOfTxt
 
 # 统计代码行数
-import getCodeLine
+# import getCodeLine
+
+# 分析html
+# import getHtml
+
+# 生成字母验证码图片
+# import generateCodeImg
+
+# 敏感文字
+# import filterWord
+
+# txt excel相互转换
+# import txt2Excel
+
+# 声音控制
